@@ -81,11 +81,11 @@ function getDLHash()
 			
 			const fileAdded = await ipfs.add({path: 'Warren', content: buf})
 			console.log(fileAdded)
-			//DL_Hash = stringToByteArray(fileAdded.cid._baseCache.get('z'));
+			DL_Hash = stringToByteArray(fileAdded.cid._baseCache.get('z'));
 			//encrypt here
-			DL_Hash = encryptText(fileAdded.cid._baseCache.get('z'));
+			// DL_Hash = encryptText(fileAdded.cid._baseCache.get('z'));
 			console.log(DL_Hash)
-			//AddUserDL()
+			AddUserDL()
 
   
     }
@@ -192,9 +192,5 @@ function getDLHash()
 <script src="../public/js/jquery.js"></script>
 <script src="../public/js/bootstrap.min.js"></script>
 <script src="../public/js/sweet-alert.min.js"></script>
-<!-- CryptoJS -->
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/rollups/aes.js"></script>
-<script src="http://crypto-js.googlecode.com/svn/tags/3.1.2/build/components/pad-nopadding-min.js"></script>
-<script src="https://greasyfork.org/scripts/6696-cryptojs-lib-bytearray/code/CryptoJSlibByteArray.js"></script>
 </body>
 </html>
